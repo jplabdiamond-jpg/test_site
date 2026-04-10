@@ -508,13 +508,39 @@ footer small a { color:rgba(255,255,255,.7); }
     background:rgba(255,255,255,0); z-index:99;
     transition:all .5s cubic-bezier(.215,.61,.355,1);
   }
-  #hnav .logo { position:fixed; top:22px; left:25px; pointer-events:auto; }
-  #hnav .logo img { position:absolute; top:0; left:0; width:auto; height:36px; transition:all .5s cubic-bezier(.215,.61,.355,1); }
-  #hnav .logo img.white { opacity:1; }
-  #hnav .logo img.black { opacity:0; }
-  header.scrolled #hnav { background:rgba(255,255,255,.9); }
+  /* ロゴ＋宿名ラッパー */
+  #hnav .logo {
+    position:fixed; top:0; left:0; height:80px;
+    display:flex; align-items:center; gap:10px;
+    padding:0 0 0 15px; pointer-events:auto;
+  }
+  #hnav .logo a {
+    position:relative; display:flex; align-items:center; gap:10px; text-decoration:none;
+  }
+  #hnav .logo img {
+    width:auto; height:48px;
+    transition:opacity .5s cubic-bezier(.215,.61,.355,1);
+    flex-shrink:0;
+  }
+  /* whiteは通常フロー、blackは重ねてabsolute */
+  #hnav .logo img.white { opacity:1; display:block; }
+  #hnav .logo img.black { opacity:0; position:absolute; top:50%; left:0; transform:translateY(-50%); width:auto; height:48px; }
+  /* 宿名テキスト（初期：白） */
+  #hnav .logo .hnav_name {
+    font-size:14rem; letter-spacing:.12em; color:rgba(255,255,255,.95);
+    white-space:nowrap; line-height:1;
+    text-shadow:0 1px 4px rgba(0,0,0,.4);
+    transition:color .5s cubic-bezier(.215,.61,.355,1);
+    font-family:'Noto Serif JP',serif;
+  }
+  /* スクロール後：白60%透過ヘッダー */
+  header.scrolled #hnav { background:rgba(255,255,255,.6); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
   header.scrolled #hnav .logo img.white { opacity:0; }
   header.scrolled #hnav .logo img.black { opacity:1; }
+  header.scrolled #hnav .logo .hnav_name { color:#222; text-shadow:none; }
+  header.scrolled #hnav .hnav_icon span { background:#000; }
+  /* snav は SP では完全非表示（2重ヘッダー防止） */
+  #snav { display:none!important; }
   #hnav_btn { display:block; position:fixed; top:14px; right:10px; width:60px; height:51px; padding:15px; pointer-events:auto; z-index:1; }
   #hnav .hnav_icon,#hnav .hnav_icon span { display:block; transition:all .5s cubic-bezier(.215,.61,.355,1); }
   #hnav .hnav_icon { position:relative; width:30px; height:21px; }
@@ -633,9 +659,10 @@ footer small a { color:rgba(255,255,255,.7); }
     <!-- hamburger nav (SP) -->
     <nav id="hnav">
       <div class="logo">
-        <a href="index.html">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
           <img src="亀龍マーク-logo.png" alt="御宿・亀龍" class="white">
           <img src="亀龍マーク-logo.png" alt="御宿・亀龍" class="black">
+          <span class="hnav_name">御宿・亀龍</span>
         </a>
       </div>
       <div id="hnav_btn">
