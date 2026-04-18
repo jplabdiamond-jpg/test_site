@@ -271,14 +271,14 @@ header .sns i { width:30px; height:30px; margin:0; }
   background-size:cover; background-repeat:no-repeat; background-position:center top;
 }
 /* hero bg images – using available room photos */
-#mv #carousel li:nth-child(1).slick-slide { background-image:url('亀龍-外観写真.jpg'); background-position:center center; }
-#mv #carousel li:nth-child(2).slick-slide { background-image:url('玄関ホール①.jpg'); background-position:center center; }
-#mv #carousel li:nth-child(3).slick-slide { background-image:url('玄関ホール②.jpeg'); background-position:center center; }
-#mv #carousel li:nth-child(4).slick-slide { background-image:url('新　鶴の間.jpeg'); background-position:center center; }
-#mv #carousel li:nth-child(5).slick-slide { background-image:url('新　龍の間.jpeg'); background-position:center center; }
-#mv #carousel li:nth-child(6).slick-slide { background-image:url('新　亀の間.jpeg'); background-position:center center; }
-#mv #carousel li:nth-child(7).slick-slide { background-image:url('食堂.jpeg'); background-position:center center; }
-#mv #carousel li:nth-child(8).slick-slide { background-image:url('客間②.jpeg'); background-position:center center; }
+#mv #carousel li:nth-child(1).slick-slide { background-image:url('gaikan-main.jpg'); background-position:center center; }
+#mv #carousel li:nth-child(2).slick-slide { background-image:url('entrance-hall1.jpg'); background-position:center center; }
+#mv #carousel li:nth-child(3).slick-slide { background-image:url('entrance-hall2.jpeg'); background-position:center center; }
+#mv #carousel li:nth-child(4).slick-slide { background-image:url('room-tsuru.jpeg'); background-position:center center; }
+#mv #carousel li:nth-child(5).slick-slide { background-image:url('room-ryu.jpeg'); background-position:center center; }
+#mv #carousel li:nth-child(6).slick-slide { background-image:url('room-kame.jpeg'); background-position:center center; }
+#mv #carousel li:nth-child(7).slick-slide { background-image:url('shokudo.jpeg'); background-position:center center; }
+#mv #carousel li:nth-child(8).slick-slide { background-image:url('kyakuma2.jpeg'); background-position:center center; }
 
 /* scroll indicator */
 @keyframes scroll { 0%{transform:translateY(-100%)} 100%{transform:translateY(200%)} }
@@ -321,18 +321,18 @@ header .sns i { width:30px; height:30px; margin:0; }
 .home_outline .inview-zoom {
   height:100vh; border-top:20px solid #fff; border-bottom:20px solid #fff;
 }
-.home_outline .inview-zoom div { background-image:url('亀龍-外観写真.jpg'); }
+.home_outline .inview-zoom div { background-image:url('gaikan-main.jpg'); }
 
 /* ===== LAYOUT SLIDESHOW ===== */
 .layout_slideshow h2 { letter-spacing:.08em; }
 .layout_slideshow .inview-zoom { height:600px; }
 /* 外観セクション：外観写真をメイン大画像として表示 */
 .layout_slideshow.gaikan .inview-zoom { height:700px; }
-.layout_slideshow.gaikan .inview-zoom div { background-image:url('亀龍-外観写真.jpg'); background-position:center center; }
+.layout_slideshow.gaikan .inview-zoom div { background-image:url('gaikan-main.jpg'); background-position:center center; }
 /* お部屋セクション：最初は亀の間を表示 */
-.layout_slideshow.kominka .inview-zoom div { background-image:url('亀の間.jpeg'); }
-.layout_slideshow.guestroom .inview-zoom div { background-image:url('鶴の間.jpeg'); }
-.layout_slideshow.shokudo .inview-zoom div { background-image:url('食堂.jpeg'); }
+.layout_slideshow.kominka .inview-zoom div { background-image:url('kame-room.jpeg'); }
+.layout_slideshow.guestroom .inview-zoom div { background-image:url('room-tsuru-old.jpeg'); }
+.layout_slideshow.shokudo .inview-zoom div { background-image:url('shokudo.jpeg'); }
 
 /* ===== GAIKAN GALLERY ===== */
 .gaikan_gallery {
@@ -411,7 +411,7 @@ header .sns i { width:30px; height:30px; margin:0; }
 /* ===== FOOTER ===== */
 footer {
   position:relative; width:100%; height:500px; color:#fff;
-  background-image:url('亀龍-外観写真.jpg');
+  background-image:url('gaikan-main.jpg');
   background-repeat:no-repeat; background-attachment:fixed;
   background-position:center bottom; background-size:cover;
 }
@@ -768,7 +768,7 @@ footer small a { color:rgba(255,255,255,.7); }
     <div class="wrap inview-fade">
       <h1>
         <a href="index.html">
-          <img src="亀龍マーク-logo.png" alt="御宿・亀龍（きりゅう）" class="white">
+          <img src="logo.png" alt="御宿・亀龍（きりゅう）" class="white">
         </a>
         <span class="en">Onyado Kiryu</span>
       </h1>
@@ -793,7 +793,7 @@ footer small a { color:rgba(255,255,255,.7); }
 
     <!-- scroll nav (PC tablet) -->
     <nav id="snav">
-      <div class="logo"><a href="index.html"><img src="亀龍マーク-logo.png" alt="御宿・亀龍"></a></div>
+      <div class="logo"><a href="index.html"><img src="logo.png" alt="御宿・亀龍"></a></div>
       <ul class="hover_h">
         <li><a href="#rooms"><span>お部屋</span></a></li>
         <li><a href="#shokudo"><span>食堂</span></a></li>
@@ -812,8 +812,8 @@ footer small a { color:rgba(255,255,255,.7); }
     <nav id="hnav">
       <div class="logo">
         <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-          <img src="亀龍マーク-logo.png" alt="御宿・亀龍" class="white">
-          <img src="亀龍マーク-logo.png" alt="御宿・亀龍" class="black">
+          <img src="logo.png" alt="御宿・亀龍" class="white">
+          <img src="logo.png" alt="御宿・亀龍" class="black">
           <span class="hnav_name">御宿・亀龍</span>
         </a>
       </div>
@@ -877,32 +877,32 @@ footer small a { color:rgba(255,255,255,.7); }
       <div class="inview-fade">
         <!-- 大きな写真グリッド -->
         <div class="gaikan_gallery">
-          <a href="亀龍-外観写真.jpg" data-lightbox="gaikan" data-title="外観" class="gaikan_main">
-            <img src="亀龍-外観写真.jpg" alt="外観">
+          <a href="gaikan-main.jpg" data-lightbox="gaikan" data-title="外観" class="gaikan_main">
+            <img src="gaikan-main.jpg" alt="外観">
           </a>
           <div class="gaikan_sub">
-            <a href="外観　２.jpeg" data-lightbox="gaikan" data-title="外観②">
-              <img src="外観　２.jpeg" alt="外観②">
+            <a href="gaikan-sub.jpeg" data-lightbox="gaikan" data-title="外観②">
+              <img src="gaikan-sub.jpeg" alt="外観②">
             </a>
-            <a href="外観　龍.jpeg" data-lightbox="gaikan" data-title="外観（龍）">
-              <img src="外観　龍.jpeg" alt="外観（龍）">
+            <a href="gaikan-ryu.jpeg" data-lightbox="gaikan" data-title="外観（龍）">
+              <img src="gaikan-ryu.jpeg" alt="外観（龍）">
             </a>
           </div>
         </div>
         <!-- ループスライダー（小サムネイル） -->
         <div class="loopslider" style="margin-top:20px;">
           <ul class="hoverimg" id="slider-gaikan">
-            <li><a href="亀龍-外観写真.jpg" data-lightbox="gaikan" data-title="外観"><img src="亀龍-外観写真.jpg" alt="外観"></a></li>
-            <li><a href="外観　２.jpeg" data-lightbox="gaikan" data-title="外観②"><img src="外観　２.jpeg" alt="外観②"></a></li>
-            <li><a href="外観　龍.jpeg" data-lightbox="gaikan" data-title="外観（龍）"><img src="外観　龍.jpeg" alt="外観（龍）"></a></li>
-            <li><a href="玄関ホール①.jpg" data-lightbox="gaikan" data-title="玄関ホール①"><img src="玄関ホール①.jpg" alt="玄関ホール①"></a></li>
-            <li><a href="玄関ホール②.jpeg" data-lightbox="gaikan" data-title="玄関ホール②"><img src="玄関ホール②.jpeg" alt="玄関ホール②"></a></li>
+            <li><a href="gaikan-main.jpg" data-lightbox="gaikan" data-title="外観"><img src="gaikan-main.jpg" alt="外観"></a></li>
+            <li><a href="gaikan-sub.jpeg" data-lightbox="gaikan" data-title="外観②"><img src="gaikan-sub.jpeg" alt="外観②"></a></li>
+            <li><a href="gaikan-ryu.jpeg" data-lightbox="gaikan" data-title="外観（龍）"><img src="gaikan-ryu.jpeg" alt="外観（龍）"></a></li>
+            <li><a href="entrance-hall1.jpg" data-lightbox="gaikan" data-title="玄関ホール①"><img src="entrance-hall1.jpg" alt="玄関ホール①"></a></li>
+            <li><a href="entrance-hall2.jpeg" data-lightbox="gaikan" data-title="玄関ホール②"><img src="entrance-hall2.jpeg" alt="玄関ホール②"></a></li>
             <!-- 複製（シームレスループ用） -->
-            <li><a href="亀龍-外観写真.jpg" data-lightbox="gaikan" data-title="外観"><img src="亀龍-外観写真.jpg" alt="外観"></a></li>
-            <li><a href="外観　２.jpeg" data-lightbox="gaikan" data-title="外観②"><img src="外観　２.jpeg" alt="外観②"></a></li>
-            <li><a href="外観　龍.jpeg" data-lightbox="gaikan" data-title="外観（龍）"><img src="外観　龍.jpeg" alt="外観（龍）"></a></li>
-            <li><a href="玄関ホール①.jpg" data-lightbox="gaikan" data-title="玄関ホール①"><img src="玄関ホール①.jpg" alt="玄関ホール①"></a></li>
-            <li><a href="玄関ホール②.jpeg" data-lightbox="gaikan" data-title="玄関ホール②"><img src="玄関ホール②.jpeg" alt="玄関ホール②"></a></li>
+            <li><a href="gaikan-main.jpg" data-lightbox="gaikan" data-title="外観"><img src="gaikan-main.jpg" alt="外観"></a></li>
+            <li><a href="gaikan-sub.jpeg" data-lightbox="gaikan" data-title="外観②"><img src="gaikan-sub.jpeg" alt="外観②"></a></li>
+            <li><a href="gaikan-ryu.jpeg" data-lightbox="gaikan" data-title="外観（龍）"><img src="gaikan-ryu.jpeg" alt="外観（龍）"></a></li>
+            <li><a href="entrance-hall1.jpg" data-lightbox="gaikan" data-title="玄関ホール①"><img src="entrance-hall1.jpg" alt="玄関ホール①"></a></li>
+            <li><a href="entrance-hall2.jpeg" data-lightbox="gaikan" data-title="玄関ホール②"><img src="entrance-hall2.jpeg" alt="玄関ホール②"></a></li>
           </ul>
         </div>
 
@@ -910,8 +910,8 @@ footer small a { color:rgba(255,255,255,.7); }
         <div class="ryuboku_section inview-fade">
           <div class="ryuboku_inner">
             <div class="ryuboku_img">
-              <a href="龍木.jpeg" data-lightbox="gaikan" data-title="龍木">
-                <img src="龍木.jpeg" alt="龍木">
+              <a href="ryu-tree.jpeg" data-lightbox="gaikan" data-title="龍木">
+                <img src="ryu-tree.jpeg" alt="龍木">
               </a>
             </div>
             <div class="ryuboku_text">
@@ -940,8 +940,8 @@ footer small a { color:rgba(255,255,255,.7); }
           <!-- 亀の間 -->
           <div class="room_card inview-up">
             <div class="room_imgs">
-              <a href="新　亀の間.jpeg" data-lightbox="room-kame" data-title="亀の間" class="room_main_img room_single_img">
-                <img src="新　亀の間.jpeg" alt="亀の間">
+              <a href="room-kame.jpeg" data-lightbox="room-kame" data-title="亀の間" class="room_main_img room_single_img">
+                <img src="room-kame.jpeg" alt="亀の間">
               </a>
             </div>
             <div class="room_info">
@@ -953,8 +953,8 @@ footer small a { color:rgba(255,255,255,.7); }
           <!-- 龍の間 -->
           <div class="room_card inview-up">
             <div class="room_imgs">
-              <a href="新　龍の間.jpeg" data-lightbox="room-ryu" data-title="龍の間" class="room_main_img room_single_img">
-                <img src="新　龍の間.jpeg" alt="龍の間">
+              <a href="room-ryu.jpeg" data-lightbox="room-ryu" data-title="龍の間" class="room_main_img room_single_img">
+                <img src="room-ryu.jpeg" alt="龍の間">
               </a>
             </div>
             <div class="room_info">
@@ -967,8 +967,8 @@ footer small a { color:rgba(255,255,255,.7); }
           <!-- 鶴の間 -->
           <div class="room_card inview-up">
             <div class="room_imgs">
-              <a href="新　鶴の間.jpeg" data-lightbox="room-tsuru" data-title="鶴の間" class="room_main_img room_single_img">
-                <img src="新　鶴の間.jpeg" alt="鶴の間">
+              <a href="room-tsuru.jpeg" data-lightbox="room-tsuru" data-title="鶴の間" class="room_main_img room_single_img">
+                <img src="room-tsuru.jpeg" alt="鶴の間">
               </a>
             </div>
             <div class="room_info">
@@ -994,11 +994,11 @@ footer small a { color:rgba(255,255,255,.7); }
       </div>
       <div class="inview-fade">
         <div class="shokudo_split">
-          <a href="食堂　新.jpeg" data-lightbox="shokudo" data-title="食堂" class="shokudo_panel">
-            <img src="食堂　新.jpeg" alt="食堂">
+          <a href="shokudo-new.jpeg" data-lightbox="shokudo" data-title="食堂" class="shokudo_panel">
+            <img src="shokudo-new.jpeg" alt="食堂">
           </a>
-          <a href="食堂.jpeg" data-lightbox="shokudo" data-title="食堂" class="shokudo_panel">
-            <img src="食堂.jpeg" alt="食堂">
+          <a href="shokudo.jpeg" data-lightbox="shokudo" data-title="食堂" class="shokudo_panel">
+            <img src="shokudo.jpeg" alt="食堂">
           </a>
         </div>
       </div>
@@ -1010,8 +1010,8 @@ footer small a { color:rgba(255,255,255,.7); }
       <div class="inview-fade">
         <div class="facility_grid">
           <div class="facility_item">
-            <a href="トイレ.jpeg" data-lightbox="facilities" data-title="トイレ">
-              <div class="facility_img"><img src="トイレ.jpeg" alt="トイレ"></div>
+            <a href="toilet.jpeg" data-lightbox="facilities" data-title="トイレ">
+              <div class="facility_img"><img src="toilet.jpeg" alt="トイレ"></div>
             </a>
             <div class="facility_text">
               <h4>トイレ</h4>
@@ -1019,8 +1019,8 @@ footer small a { color:rgba(255,255,255,.7); }
             </div>
           </div>
           <div class="facility_item">
-            <a href="風呂.jpeg" data-lightbox="facilities" data-title="風呂">
-              <div class="facility_img"><img src="風呂.jpeg" alt="風呂"></div>
+            <a href="bath.jpeg" data-lightbox="facilities" data-title="風呂">
+              <div class="facility_img"><img src="bath.jpeg" alt="風呂"></div>
             </a>
             <div class="facility_text">
               <h4>風呂</h4>
@@ -1028,8 +1028,8 @@ footer small a { color:rgba(255,255,255,.7); }
             </div>
           </div>
           <div class="facility_item">
-            <a href="洗面所.jpeg" data-lightbox="facilities" data-title="洗面台">
-              <div class="facility_img"><img src="洗面所.jpeg" alt="洗面台"></div>
+            <a href="washroom.jpeg" data-lightbox="facilities" data-title="洗面台">
+              <div class="facility_img"><img src="washroom.jpeg" alt="洗面台"></div>
             </a>
             <div class="facility_text">
               <h4>洗面台</h4>
@@ -1048,78 +1048,78 @@ footer small a { color:rgba(255,255,255,.7); }
         <!-- 行1：左流れ（A,B,C,D,E × 3セット） -->
         <div class="sur_row">
           <div class="sur_track" id="sur-row1">
-            <a href="休息スペース.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="休息スペース.jpeg" alt="休息スペース"></a>
-            <a href="休息スペースからの景色.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="休息スペースからの景色.jpeg" alt="休息スペースからの景色"></a>
-            <a href="イメージ　新.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="イメージ　新.jpeg" alt="イメージ"></a>
-            <a href="大井休憩所.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="大井休憩所.jpeg" alt="大井休憩所"></a>
-            <a href="イメージA.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="イメージA.jpeg" alt="周辺イメージA"></a>
-            <a href="休息スペース.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="休息スペース.jpeg" alt="休息スペース"></a>
-            <a href="休息スペースからの景色.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="休息スペースからの景色.jpeg" alt="休息スペースからの景色"></a>
-            <a href="イメージ　新.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="イメージ　新.jpeg" alt="イメージ"></a>
-            <a href="大井休憩所.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="大井休憩所.jpeg" alt="大井休憩所"></a>
-            <a href="イメージA.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="イメージA.jpeg" alt="周辺イメージA"></a>
-            <a href="休息スペース.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="休息スペース.jpeg" alt="休息スペース"></a>
-            <a href="休息スペースからの景色.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="休息スペースからの景色.jpeg" alt="休息スペースからの景色"></a>
-            <a href="イメージ　新.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="イメージ　新.jpeg" alt="イメージ"></a>
-            <a href="大井休憩所.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="大井休憩所.jpeg" alt="大井休憩所"></a>
-            <a href="イメージA.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="イメージA.jpeg" alt="周辺イメージA"></a>
+            <a href="rest-space.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="rest-space.jpeg" alt="休息スペース"></a>
+            <a href="rest-space-view.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="rest-space-view.jpeg" alt="休息スペースからの景色"></a>
+            <a href="image-new.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="image-new.jpeg" alt="イメージ"></a>
+            <a href="ooi-rest.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="ooi-rest.jpeg" alt="大井休憩所"></a>
+            <a href="image-a.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="image-a.jpeg" alt="周辺イメージA"></a>
+            <a href="rest-space.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="rest-space.jpeg" alt="休息スペース"></a>
+            <a href="rest-space-view.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="rest-space-view.jpeg" alt="休息スペースからの景色"></a>
+            <a href="image-new.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="image-new.jpeg" alt="イメージ"></a>
+            <a href="ooi-rest.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="ooi-rest.jpeg" alt="大井休憩所"></a>
+            <a href="image-a.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="image-a.jpeg" alt="周辺イメージA"></a>
+            <a href="rest-space.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="rest-space.jpeg" alt="休息スペース"></a>
+            <a href="rest-space-view.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="rest-space-view.jpeg" alt="休息スペースからの景色"></a>
+            <a href="image-new.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="image-new.jpeg" alt="イメージ"></a>
+            <a href="ooi-rest.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="ooi-rest.jpeg" alt="大井休憩所"></a>
+            <a href="image-a.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="image-a.jpeg" alt="周辺イメージA"></a>
           </div>
         </div>
 
         <!-- 行2：右流れ（A,B,C,D,E × 3セット） -->
         <div class="sur_row">
           <div class="sur_track" id="sur-row2">
-            <a href="大井休憩所　道しるべ.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="大井休憩所　道しるべ.jpeg" alt="大井休憩所 道しるべ"></a>
-            <a href="大井休憩所　map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="大井休憩所　map.jpeg" alt="大井休憩所 地図"></a>
-            <a href="入口より遍路道方向.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="入口より遍路道方向.jpeg" alt="入口より遍路道方向"></a>
-            <a href="地図.jpeg" data-lightbox="surrounding" data-title="地図"><img src="地図.jpeg" alt="地図"></a>
-            <a href="イメージB.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="イメージB.jpeg" alt="周辺イメージB"></a>
-            <a href="大井休憩所　道しるべ.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="大井休憩所　道しるべ.jpeg" alt="大井休憩所 道しるべ"></a>
-            <a href="大井休憩所　map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="大井休憩所　map.jpeg" alt="大井休憩所 地図"></a>
-            <a href="入口より遍路道方向.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="入口より遍路道方向.jpeg" alt="入口より遍路道方向"></a>
-            <a href="地図.jpeg" data-lightbox="surrounding" data-title="地図"><img src="地図.jpeg" alt="地図"></a>
-            <a href="イメージB.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="イメージB.jpeg" alt="周辺イメージB"></a>
-            <a href="大井休憩所　道しるべ.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="大井休憩所　道しるべ.jpeg" alt="大井休憩所 道しるべ"></a>
-            <a href="大井休憩所　map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="大井休憩所　map.jpeg" alt="大井休憩所 地図"></a>
-            <a href="入口より遍路道方向.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="入口より遍路道方向.jpeg" alt="入口より遍路道方向"></a>
-            <a href="地図.jpeg" data-lightbox="surrounding" data-title="地図"><img src="地図.jpeg" alt="地図"></a>
-            <a href="イメージB.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="イメージB.jpeg" alt="周辺イメージB"></a>
+            <a href="ooi-sign.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="ooi-sign.jpeg" alt="大井休憩所 道しるべ"></a>
+            <a href="ooi-map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="ooi-map.jpeg" alt="大井休憩所 地図"></a>
+            <a href="entrance-direction.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="entrance-direction.jpeg" alt="入口より遍路道方向"></a>
+            <a href="map.jpeg" data-lightbox="surrounding" data-title="地図"><img src="map.jpeg" alt="地図"></a>
+            <a href="image-b.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="image-b.jpeg" alt="周辺イメージB"></a>
+            <a href="ooi-sign.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="ooi-sign.jpeg" alt="大井休憩所 道しるべ"></a>
+            <a href="ooi-map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="ooi-map.jpeg" alt="大井休憩所 地図"></a>
+            <a href="entrance-direction.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="entrance-direction.jpeg" alt="入口より遍路道方向"></a>
+            <a href="map.jpeg" data-lightbox="surrounding" data-title="地図"><img src="map.jpeg" alt="地図"></a>
+            <a href="image-b.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="image-b.jpeg" alt="周辺イメージB"></a>
+            <a href="ooi-sign.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="ooi-sign.jpeg" alt="大井休憩所 道しるべ"></a>
+            <a href="ooi-map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="ooi-map.jpeg" alt="大井休憩所 地図"></a>
+            <a href="entrance-direction.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="entrance-direction.jpeg" alt="入口より遍路道方向"></a>
+            <a href="map.jpeg" data-lightbox="surrounding" data-title="地図"><img src="map.jpeg" alt="地図"></a>
+            <a href="image-b.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="image-b.jpeg" alt="周辺イメージB"></a>
           </div>
         </div>
 
         <!-- 行3：左流れ（A,B,C,D × 3セット） -->
         <div class="sur_row">
           <div class="sur_track" id="sur-row3">
-            <a href="イメージ　Tシャツ.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="イメージ　Tシャツ.jpeg" alt="お遍路Tシャツ"></a>
-            <a href="イメージ　お遍路.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="イメージ　お遍路.jpeg" alt="お遍路イメージ"></a>
-            <a href="イメージ　お遍路２.JPG" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="イメージ　お遍路２.JPG" alt="お遍路イメージ②"></a>
-            <a href="イメージ　お遍路３.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="イメージ　お遍路３.jpeg" alt="お遍路イメージ③"></a>
-            <a href="イメージ　Tシャツ.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="イメージ　Tシャツ.jpeg" alt="お遍路Tシャツ"></a>
-            <a href="イメージ　お遍路.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="イメージ　お遍路.jpeg" alt="お遍路イメージ"></a>
-            <a href="イメージ　お遍路２.JPG" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="イメージ　お遍路２.JPG" alt="お遍路イメージ②"></a>
-            <a href="イメージ　お遍路３.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="イメージ　お遍路３.jpeg" alt="お遍路イメージ③"></a>
-            <a href="イメージ　Tシャツ.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="イメージ　Tシャツ.jpeg" alt="お遍路Tシャツ"></a>
-            <a href="イメージ　お遍路.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="イメージ　お遍路.jpeg" alt="お遍路イメージ"></a>
-            <a href="イメージ　お遍路２.JPG" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="イメージ　お遍路２.JPG" alt="お遍路イメージ②"></a>
-            <a href="イメージ　お遍路３.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="イメージ　お遍路３.jpeg" alt="お遍路イメージ③"></a>
+            <a href="image-tshirt.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="image-tshirt.jpeg" alt="お遍路Tシャツ"></a>
+            <a href="image-ohenro.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="image-ohenro.jpeg" alt="お遍路イメージ"></a>
+            <a href="image-ohenro2.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="image-ohenro2.jpeg" alt="お遍路イメージ②"></a>
+            <a href="image-ohenro3.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="image-ohenro3.jpeg" alt="お遍路イメージ③"></a>
+            <a href="image-tshirt.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="image-tshirt.jpeg" alt="お遍路Tシャツ"></a>
+            <a href="image-ohenro.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="image-ohenro.jpeg" alt="お遍路イメージ"></a>
+            <a href="image-ohenro2.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="image-ohenro2.jpeg" alt="お遍路イメージ②"></a>
+            <a href="image-ohenro3.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="image-ohenro3.jpeg" alt="お遍路イメージ③"></a>
+            <a href="image-tshirt.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="image-tshirt.jpeg" alt="お遍路Tシャツ"></a>
+            <a href="image-ohenro.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="image-ohenro.jpeg" alt="お遍路イメージ"></a>
+            <a href="image-ohenro2.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="image-ohenro2.jpeg" alt="お遍路イメージ②"></a>
+            <a href="image-ohenro3.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="image-ohenro3.jpeg" alt="お遍路イメージ③"></a>
           </div>
         </div>
 
         <!-- 行4：右流れ（A,B,C,D × 3セット） -->
         <div class="sur_row">
           <div class="sur_track" id="sur-row4">
-            <a href="イメージ　お遍路４.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="イメージ　お遍路４.jpeg" alt="お遍路イメージ④"></a>
-            <a href="イメージ　お遍路５.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="イメージ　お遍路５.jpeg" alt="お遍路イメージ⑤"></a>
-            <a href="イメージ　わげさ.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="イメージ　わげさ.jpeg" alt="わげさ"></a>
-            <a href="イメージ　装飾.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="イメージ　装飾.jpeg" alt="装飾"></a>
-            <a href="イメージ　お遍路４.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="イメージ　お遍路４.jpeg" alt="お遍路イメージ④"></a>
-            <a href="イメージ　お遍路５.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="イメージ　お遍路５.jpeg" alt="お遍路イメージ⑤"></a>
-            <a href="イメージ　わげさ.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="イメージ　わげさ.jpeg" alt="わげさ"></a>
-            <a href="イメージ　装飾.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="イメージ　装飾.jpeg" alt="装飾"></a>
-            <a href="イメージ　お遍路４.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="イメージ　お遍路４.jpeg" alt="お遍路イメージ④"></a>
-            <a href="イメージ　お遍路５.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="イメージ　お遍路５.jpeg" alt="お遍路イメージ⑤"></a>
-            <a href="イメージ　わげさ.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="イメージ　わげさ.jpeg" alt="わげさ"></a>
-            <a href="イメージ　装飾.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="イメージ　装飾.jpeg" alt="装飾"></a>
+            <a href="image-ohenro4.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="image-ohenro4.jpeg" alt="お遍路イメージ④"></a>
+            <a href="image-ohenro5.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="image-ohenro5.jpeg" alt="お遍路イメージ⑤"></a>
+            <a href="image-wagesa.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="image-wagesa.jpeg" alt="わげさ"></a>
+            <a href="image-decoration.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="image-decoration.jpeg" alt="装飾"></a>
+            <a href="image-ohenro4.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="image-ohenro4.jpeg" alt="お遍路イメージ④"></a>
+            <a href="image-ohenro5.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="image-ohenro5.jpeg" alt="お遍路イメージ⑤"></a>
+            <a href="image-wagesa.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="image-wagesa.jpeg" alt="わげさ"></a>
+            <a href="image-decoration.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="image-decoration.jpeg" alt="装飾"></a>
+            <a href="image-ohenro4.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="image-ohenro4.jpeg" alt="お遍路イメージ④"></a>
+            <a href="image-ohenro5.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="image-ohenro5.jpeg" alt="お遍路イメージ⑤"></a>
+            <a href="image-wagesa.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="image-wagesa.jpeg" alt="わげさ"></a>
+            <a href="image-decoration.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="image-decoration.jpeg" alt="装飾"></a>
           </div>
         </div>
 
@@ -1199,7 +1199,7 @@ footer small a { color:rgba(255,255,255,.7); }
       <span>PAGETOP</span>
     </a>
     <address>
-      <img src="亀龍マーク-logo.png" alt="御宿・亀龍（きりゅう）" style="filter:brightness(0) invert(1);">
+      <img src="logo.png" alt="御宿・亀龍（きりゅう）" style="filter:brightness(0) invert(1);">
       〒771-5177 徳島県阿南市大井町中筋18-2<br>
       tel: <a href="tel:09032048821">090-3204-8821</a><br>
       mail: <a href="mailto:onyado.kiryu@docomo.ne.jp">onyado.kiryu@docomo.ne.jp</a>
