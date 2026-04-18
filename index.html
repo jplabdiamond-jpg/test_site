@@ -322,6 +322,8 @@ header .sns i { width:30px; height:30px; margin:0; }
   text-shadow:0 2px 12px rgba(0,0,0,.45);
 }
 .home_outline li:last-child { margin-left:0; }
+.pc-only { display:inline; }
+.sp-only { display:none; }
 .home_outline .inview-zoom {
   height:100vh; border-top:20px solid #fff; border-bottom:20px solid #fff;
 }
@@ -729,7 +731,10 @@ footer small a { color:rgba(255,255,255,.7); }
   #mv .scroll:before { left:20px; }
   #mv .scroll:after { left:20px; }
   /* home outline sp */
-  .home_outline li { height:28em; margin-left:1em; font-size:20rem; font-weight:bold; }
+  .home_outline ul { align-items:center; padding-top:0; }
+  .home_outline li { height:auto; min-height:0; margin-left:.6em; font-size:16rem; font-weight:bold; line-height:2; letter-spacing:.25em; }
+  .pc-only { display:none; }
+  .sp-only { display:inline; }
   .home_outline .inview-zoom { border-top:15px solid #fff; border-bottom:15px solid #fff; }
   /* news sp */
   .home_news dl { display:block; margin:0 15px; }
@@ -864,7 +869,8 @@ footer small a { color:rgba(255,255,255,.7); }
     <section class="home_outline">
       <ul class="inview-up">
         <li>巡礼の道に静かに佇む遍路宿。</li>
-        <li>二十番・鶴林寺と二十一番・太龍寺の懐で遍路の疲れを癒す、安らぎのひととき。</li>
+        <li><span class="pc-only">二十番・鶴林寺と二十一番・太龍寺の懐で遍路の疲れを癒す、安らぎのひととき。</span><span class="sp-only">二十番・鶴林寺と二十一番</span></li>
+        <li class="sp-only">太龍寺の懐で遍路の疲れを癒す、安らぎのひととき。</li>
         <li>亀と龍と鶴が護る、心やすらぐ宿。</li>
       </ul>
       <div class="inview-zoom">
@@ -1165,6 +1171,11 @@ footer small a { color:rgba(255,255,255,.7); }
           <p>「亀龍」は、20番・鶴林寺を下りきった場所、水井橋を渡る手前、旧大井小学校の真下、大井休憩所の斜め前にあります。<br>
           <br>
           〒771-5177 徳島県阿南市大井町中筋18-2
+          </p>
+          <h4 style="margin-top:60px;">宿泊プラン</h4>
+          <p style="margin-top:30px; text-align:left; max-width:480px; margin-left:auto; margin-right:auto;">
+            １泊２食付　（夕食、朝食）　…　８，８００円（税込）<br>
+            素泊まり　…　６，６００円（税込）
           </p>
         </div>
       </div>
