@@ -461,6 +461,96 @@ footer small {
 }
 footer small a { color:rgba(255,255,255,.7); }
 
+/* ===== HOME OUTLINE: ENGLISH HORIZONTAL LAYOUT ===== */
+html[lang="en"] .home_outline ul {
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:.6em;
+}
+html[lang="en"] .home_outline li {
+  writing-mode:horizontal-tb;
+  -webkit-writing-mode:horizontal-tb;
+  -ms-writing-mode:lr-tb;
+  width:auto;
+  height:auto;
+  margin-left:0;
+  font-size:20rem;
+  line-height:1.6;
+  letter-spacing:.06em;
+  text-align:center;
+  padding:0 20px;
+}
+html[lang="en"] .home_outline li:last-child { margin-left:0; }
+@media screen and (max-width:768px) {
+  html[lang="en"] .home_outline li { font-size:15rem; padding:0 15px; }
+}
+
+/* ===== LANGUAGE TOGGLE ===== */
+#lang-toggle {
+  position:fixed; bottom:30px; right:30px; z-index:9000;
+  display:flex; align-items:center; gap:0;
+  background:#fff; border:1px solid #b5a07a; border-radius:24px;
+  overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.15);
+  font-family:'Libre Baskerville',serif; font-size:12rem; letter-spacing:.08em;
+}
+#lang-toggle button {
+  padding:8px 16px; border:none; background:transparent; cursor:pointer;
+  color:#999; transition:all .25s; font-size:12rem; font-family:inherit;
+  letter-spacing:.1em;
+}
+#lang-toggle button.active {
+  background:#b5a07a; color:#fff; font-weight:bold;
+}
+#lang-toggle button:hover:not(.active) { color:#b5a07a; }
+
+/* ===== LANGUAGE POPUP ===== */
+#lang-popup-overlay {
+  display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,.65); z-index:10000; align-items:center; justify-content:center;
+}
+#lang-popup-overlay.show { display:flex; }
+#lang-popup {
+  background:#fff; padding:50px 40px; text-align:center; max-width:420px; width:90%;
+  position:relative;
+}
+#lang-popup .popup-logo { margin-bottom:24px; }
+#lang-popup .popup-logo img { height:60px; }
+#lang-popup h2 {
+  font-size:14rem; letter-spacing:.2em; color:#888; margin-bottom:6px;
+  font-family:'Libre Baskerville',serif;
+}
+#lang-popup h2::before { display:none; }
+#lang-popup .popup-title-ja {
+  font-size:16rem; letter-spacing:.15em; color:#000; margin-bottom:30px;
+  display:block;
+}
+#lang-popup .popup-divider {
+  width:40px; height:1px; background:#b5a07a; margin:0 auto 30px;
+}
+#lang-popup .popup-btns {
+  display:flex; gap:12px; justify-content:center;
+}
+#lang-popup .popup-btn {
+  flex:1; max-width:160px; padding:14px 0;
+  border:1px solid #000; background:transparent; cursor:pointer;
+  font-size:13rem; letter-spacing:.15em; font-family:'Noto Serif JP',serif;
+  transition:all .25s; color:#000;
+}
+#lang-popup .popup-btn:hover,
+#lang-popup .popup-btn.sel {
+  background:#000; color:#fff;
+}
+#lang-popup .popup-note {
+  font-size:11rem; color:#aaa; margin-top:20px; letter-spacing:.05em;
+}
+
+@media screen and (max-width:768px) {
+  #lang-toggle { bottom:20px; right:15px; }
+  #lang-toggle button { padding:7px 12px; font-size:11rem; }
+  #lang-popup { padding:40px 24px; }
+}
+
 /* ===== SNS ICONS (inline SVG fallback – colored circles) ===== */
 .icon-fb,.icon-tw,.icon-ig,.icon-mail,.icon-tel {
   display:inline-flex; align-items:center; justify-content:center;
@@ -490,6 +580,23 @@ footer small a { color:rgba(255,255,255,.7); }
 @media screen and (max-width:999px) {
   .shokudo_split { flex-direction:column; height:auto; padding:0 15px; }
   .shokudo_panel { height:220px; }
+}
+
+/* ===== 食事ギャラリー ===== */
+.meal_gallery {
+  max-width:1200px; margin:24px auto 0 auto; padding:0 20px;
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:8px;
+}
+.meal_gallery a {
+  display:block; aspect-ratio:4/3; overflow:hidden; position:relative; cursor:pointer;
+}
+.meal_gallery a img {
+  display:block; width:100%; height:100%; object-fit:cover;
+  transition:transform .5s cubic-bezier(.215,.61,.355,1);
+}
+.meal_gallery a:hover img { transform:scale(1.06); }
+@media screen and (max-width:999px){
+  .meal_gallery { grid-template-columns:repeat(2, 1fr); padding:0 15px; gap:6px; }
 }
 
 /* ===== 周辺写真マーキー ===== */
@@ -1011,6 +1118,20 @@ footer small a { color:rgba(255,255,255,.7); }
             <img src="shokudo.jpeg" alt="食堂">
           </a>
         </div>
+        <div class="meal_gallery">
+          <a href="dinner-2.jpg" data-lightbox="shokudo" data-title="夕食イメージ"><img src="dinner-2.jpg" alt="夕食イメージ" loading="lazy"></a>
+          <a href="dinner-3.jpeg" data-lightbox="shokudo" data-title="夕食イメージ"><img src="dinner-3.jpeg" alt="夕食イメージ" loading="lazy"></a>
+          <a href="dinner-4.jpeg" data-lightbox="shokudo" data-title="夕食イメージ"><img src="dinner-4.jpeg" alt="夕食イメージ" loading="lazy"></a>
+          <a href="dinner-5.jpeg" data-lightbox="shokudo" data-title="夕食イメージ"><img src="dinner-5.jpeg" alt="夕食イメージ" loading="lazy"></a>
+          <a href="dinner-6.jpeg" data-lightbox="shokudo" data-title="夕食イメージ"><img src="dinner-6.jpeg" alt="夕食イメージ" loading="lazy"></a>
+          <a href="dinner-7.jpeg" data-lightbox="shokudo" data-title="夕食イメージ"><img src="dinner-7.jpeg" alt="夕食イメージ" loading="lazy"></a>
+          <a href="dinner-veg-1.jpeg" data-lightbox="shokudo" data-title="夕食ベジタリアンイメージ"><img src="dinner-veg-1.jpeg" alt="夕食ベジタリアンイメージ" loading="lazy"></a>
+          <a href="breakfast-2.jpeg" data-lightbox="shokudo" data-title="朝食イメージ"><img src="breakfast-2.jpeg" alt="朝食イメージ" loading="lazy"></a>
+          <a href="breakfast-3.jpeg" data-lightbox="shokudo" data-title="朝食イメージ"><img src="breakfast-3.jpeg" alt="朝食イメージ" loading="lazy"></a>
+          <a href="breakfast-veg-1.jpeg" data-lightbox="shokudo" data-title="朝食ベジタリアンイメージ"><img src="breakfast-veg-1.jpeg" alt="朝食ベジタリアンイメージ" loading="lazy"></a>
+          <a href="breakfast-veg-2.jpeg" data-lightbox="shokudo" data-title="朝食ベジタリアンイメージ"><img src="breakfast-veg-2.jpeg" alt="朝食ベジタリアンイメージ" loading="lazy"></a>
+          <a href="breakfast-veg-3.jpeg" data-lightbox="shokudo" data-title="朝食ベジタリアンイメージ"><img src="breakfast-veg-3.jpeg" alt="朝食ベジタリアンイメージ" loading="lazy"></a>
+        </div>
       </div>
     </section>
 
@@ -1059,19 +1180,28 @@ footer small a { color:rgba(255,255,255,.7); }
         <div class="sur_row">
           <div class="sur_track" id="sur-row1">
             <a href="rest-space.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="rest-space.jpeg" alt="休息スペース"></a>
+            <a href="image-1.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-1.jpeg" alt="周辺イメージ"></a>
             <a href="rest-space-view.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="rest-space-view.jpeg" alt="休息スペースからの景色"></a>
+            <a href="image-2.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-2.jpeg" alt="周辺イメージ"></a>
             <a href="image-new.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="image-new.jpeg" alt="イメージ"></a>
             <a href="ooi-rest.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="ooi-rest.jpeg" alt="大井休憩所"></a>
+            <a href="image-3.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-3.jpeg" alt="周辺イメージ"></a>
             <a href="image-a.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="image-a.jpeg" alt="周辺イメージA"></a>
             <a href="rest-space.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="rest-space.jpeg" alt="休息スペース"></a>
+            <a href="image-1.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-1.jpeg" alt="周辺イメージ"></a>
             <a href="rest-space-view.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="rest-space-view.jpeg" alt="休息スペースからの景色"></a>
+            <a href="image-2.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-2.jpeg" alt="周辺イメージ"></a>
             <a href="image-new.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="image-new.jpeg" alt="イメージ"></a>
             <a href="ooi-rest.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="ooi-rest.jpeg" alt="大井休憩所"></a>
+            <a href="image-3.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-3.jpeg" alt="周辺イメージ"></a>
             <a href="image-a.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="image-a.jpeg" alt="周辺イメージA"></a>
             <a href="rest-space.jpeg" data-lightbox="surrounding" data-title="休息スペース"><img src="rest-space.jpeg" alt="休息スペース"></a>
+            <a href="image-1.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-1.jpeg" alt="周辺イメージ"></a>
             <a href="rest-space-view.jpeg" data-lightbox="surrounding" data-title="休息スペースからの景色"><img src="rest-space-view.jpeg" alt="休息スペースからの景色"></a>
+            <a href="image-2.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-2.jpeg" alt="周辺イメージ"></a>
             <a href="image-new.jpeg" data-lightbox="surrounding" data-title="イメージ"><img src="image-new.jpeg" alt="イメージ"></a>
             <a href="ooi-rest.jpeg" data-lightbox="surrounding" data-title="徒歩30秒のお遍路道、大井休憩所"><img src="ooi-rest.jpeg" alt="大井休憩所"></a>
+            <a href="image-3.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-3.jpeg" alt="周辺イメージ"></a>
             <a href="image-a.jpeg" data-lightbox="surrounding" data-title="周辺イメージA"><img src="image-a.jpeg" alt="周辺イメージA"></a>
           </div>
         </div>
@@ -1080,19 +1210,28 @@ footer small a { color:rgba(255,255,255,.7); }
         <div class="sur_row">
           <div class="sur_track" id="sur-row2">
             <a href="ooi-sign.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="ooi-sign.jpeg" alt="大井休憩所 道しるべ"></a>
+            <a href="image-4.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-4.jpeg" alt="周辺イメージ"></a>
             <a href="ooi-map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="ooi-map.jpeg" alt="大井休憩所 地図"></a>
+            <a href="image-5.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-5.jpeg" alt="周辺イメージ"></a>
             <a href="entrance-direction.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="entrance-direction.jpeg" alt="入口より遍路道方向"></a>
             <a href="map.jpeg" data-lightbox="surrounding" data-title="地図"><img src="map.jpeg" alt="地図"></a>
+            <a href="image-6.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-6.jpeg" alt="周辺イメージ"></a>
             <a href="image-b.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="image-b.jpeg" alt="周辺イメージB"></a>
             <a href="ooi-sign.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="ooi-sign.jpeg" alt="大井休憩所 道しるべ"></a>
+            <a href="image-4.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-4.jpeg" alt="周辺イメージ"></a>
             <a href="ooi-map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="ooi-map.jpeg" alt="大井休憩所 地図"></a>
+            <a href="image-5.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-5.jpeg" alt="周辺イメージ"></a>
             <a href="entrance-direction.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="entrance-direction.jpeg" alt="入口より遍路道方向"></a>
             <a href="map.jpeg" data-lightbox="surrounding" data-title="地図"><img src="map.jpeg" alt="地図"></a>
+            <a href="image-6.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-6.jpeg" alt="周辺イメージ"></a>
             <a href="image-b.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="image-b.jpeg" alt="周辺イメージB"></a>
             <a href="ooi-sign.jpeg" data-lightbox="surrounding" data-title="大井休憩所 道しるべ"><img src="ooi-sign.jpeg" alt="大井休憩所 道しるべ"></a>
+            <a href="image-4.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-4.jpeg" alt="周辺イメージ"></a>
             <a href="ooi-map.jpeg" data-lightbox="surrounding" data-title="大井休憩所 地図"><img src="ooi-map.jpeg" alt="大井休憩所 地図"></a>
+            <a href="image-5.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-5.jpeg" alt="周辺イメージ"></a>
             <a href="entrance-direction.jpeg" data-lightbox="surrounding" data-title="入口より遍路道方向"><img src="entrance-direction.jpeg" alt="入口より遍路道方向"></a>
             <a href="map.jpeg" data-lightbox="surrounding" data-title="地図"><img src="map.jpeg" alt="地図"></a>
+            <a href="image-6.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-6.jpeg" alt="周辺イメージ"></a>
             <a href="image-b.jpeg" data-lightbox="surrounding" data-title="周辺イメージB"><img src="image-b.jpeg" alt="周辺イメージB"></a>
           </div>
         </div>
@@ -1101,16 +1240,25 @@ footer small a { color:rgba(255,255,255,.7); }
         <div class="sur_row">
           <div class="sur_track" id="sur-row3">
             <a href="image-tshirt.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="image-tshirt.jpeg" alt="お遍路Tシャツ"></a>
+            <a href="image-7.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-7.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="image-ohenro.jpeg" alt="お遍路イメージ"></a>
+            <a href="image-8.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-8.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro2.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="image-ohenro2.jpeg" alt="お遍路イメージ②"></a>
+            <a href="image-9.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-9.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro3.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="image-ohenro3.jpeg" alt="お遍路イメージ③"></a>
             <a href="image-tshirt.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="image-tshirt.jpeg" alt="お遍路Tシャツ"></a>
+            <a href="image-7.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-7.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="image-ohenro.jpeg" alt="お遍路イメージ"></a>
+            <a href="image-8.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-8.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro2.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="image-ohenro2.jpeg" alt="お遍路イメージ②"></a>
+            <a href="image-9.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-9.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro3.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="image-ohenro3.jpeg" alt="お遍路イメージ③"></a>
             <a href="image-tshirt.jpeg" data-lightbox="surrounding" data-title="お遍路Tシャツ"><img src="image-tshirt.jpeg" alt="お遍路Tシャツ"></a>
+            <a href="image-7.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-7.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ"><img src="image-ohenro.jpeg" alt="お遍路イメージ"></a>
+            <a href="image-8.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-8.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro2.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ②"><img src="image-ohenro2.jpeg" alt="お遍路イメージ②"></a>
+            <a href="image-9.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-9.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro3.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ③"><img src="image-ohenro3.jpeg" alt="お遍路イメージ③"></a>
           </div>
         </div>
@@ -1119,16 +1267,25 @@ footer small a { color:rgba(255,255,255,.7); }
         <div class="sur_row">
           <div class="sur_track" id="sur-row4">
             <a href="image-ohenro4.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="image-ohenro4.jpeg" alt="お遍路イメージ④"></a>
+            <a href="image-10.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-10.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro5.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="image-ohenro5.jpeg" alt="お遍路イメージ⑤"></a>
+            <a href="image-11.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-11.jpeg" alt="周辺イメージ"></a>
             <a href="image-wagesa.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="image-wagesa.jpeg" alt="わげさ"></a>
+            <a href="image-12.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-12.jpeg" alt="周辺イメージ"></a>
             <a href="image-decoration.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="image-decoration.jpeg" alt="装飾"></a>
             <a href="image-ohenro4.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="image-ohenro4.jpeg" alt="お遍路イメージ④"></a>
+            <a href="image-10.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-10.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro5.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="image-ohenro5.jpeg" alt="お遍路イメージ⑤"></a>
+            <a href="image-11.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-11.jpeg" alt="周辺イメージ"></a>
             <a href="image-wagesa.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="image-wagesa.jpeg" alt="わげさ"></a>
+            <a href="image-12.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-12.jpeg" alt="周辺イメージ"></a>
             <a href="image-decoration.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="image-decoration.jpeg" alt="装飾"></a>
             <a href="image-ohenro4.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ④"><img src="image-ohenro4.jpeg" alt="お遍路イメージ④"></a>
+            <a href="image-10.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-10.jpeg" alt="周辺イメージ"></a>
             <a href="image-ohenro5.jpeg" data-lightbox="surrounding" data-title="お遍路イメージ⑤"><img src="image-ohenro5.jpeg" alt="お遍路イメージ⑤"></a>
+            <a href="image-11.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-11.jpeg" alt="周辺イメージ"></a>
             <a href="image-wagesa.jpeg" data-lightbox="surrounding" data-title="わげさ"><img src="image-wagesa.jpeg" alt="わげさ"></a>
+            <a href="image-12.jpeg" data-lightbox="surrounding" data-title="周辺イメージ"><img src="image-12.jpeg" alt="周辺イメージ"></a>
             <a href="image-decoration.jpeg" data-lightbox="surrounding" data-title="装飾"><img src="image-decoration.jpeg" alt="装飾"></a>
           </div>
         </div>
@@ -1141,11 +1298,11 @@ footer small a { color:rgba(255,255,255,.7); }
       <div class="inner">
         <h2 class="inview-up">NEWS</h2>
         <dl class="inview-fade">
-          <dt>2025.04.01</dt>
+          <dt>2026.04.01</dt>
           <dd><a href="#">御宿・亀龍の公式サイトをオープンしました。</a></dd>
-          <dt>2025.03.15</dt>
+          <dt>2026.03.15</dt>
           <dd><a href="#">春のお遍路シーズンに向けて宿をリニューアルしました。</a></dd>
-          <dt>2025.01.10</dt>
+          <dt>2026.01.10</dt>
           <dd><a href="#">年末年始の営業についてのご案内。</a></dd>
         </dl>
       </div>
@@ -1190,12 +1347,11 @@ footer small a { color:rgba(255,255,255,.7); }
           <div class="contact_item">
             <span class="label">お電話でのご予約</span>
             <a href="tel:09032048821" class="value en">090-3204-8821</a>
-            <p>受付時間：8:00〜20:00</p>
           </div>
           <div class="contact_item">
             <span class="label">メールでのご予約</span>
             <a href="mailto:onyado.kiryu@docomo.ne.jp" class="value" style="font-size:14rem;">onyado.kiryu@docomo.ne.jp</a>
-            <p>24時間受付</p>
+            <p>24時間受付<br>メールでの申し込みは、コンフォームの返信が届いたら予約完了です。</p>
           </div>
           <div class="contact_item">
             <span class="label">住所</span>
@@ -1360,6 +1516,483 @@ $(function(){
   });
 
 });
+</script>
+
+<!-- ===== LANGUAGE TOGGLE BUTTON ===== -->
+<div id="lang-toggle">
+  <button id="btn-ja" class="active" onclick="setLang('ja')">JP</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ===== LANGUAGE POPUP ===== -->
+<div id="lang-popup-overlay">
+  <div id="lang-popup">
+    <div class="popup-logo">
+      <img src="logo.png" alt="御宿・亀龍">
+    </div>
+    <h2>ONYADO KIRYU</h2>
+    <span class="popup-title-ja">表示言語をお選びください</span>
+    <div class="popup-divider"></div>
+    <div class="popup-btns">
+      <button class="popup-btn" onclick="choosePopupLang('ja')">日本語</button>
+      <button class="popup-btn" onclick="choosePopupLang('en')">English</button>
+    </div>
+    <p class="popup-note">Please select your preferred language.</p>
+  </div>
+</div>
+
+<script>
+/* =============================================
+   TRANSLATION DATA
+   ============================================= */
+var i18n = {
+  ja: {
+    'html-lang': 'ja',
+    'page-title': '御宿・亀龍（きりゅう）｜阿南市大井町・お遍路宿 [公式]',
+    'meta-desc': '徳島県阿南市大井町にあるお遍路宿「御宿・亀龍（きりゅう）」の公式サイト。20番・鶴林寺を下りきった場所、水井橋を渡る手前にあります。お遍路さんを温かくお迎えします。',
+    'h1-en': 'Onyado Kiryu',
+    'nav-rooms': 'お部屋',
+    'nav-shokudo': '食堂',
+    'nav-facilities': '設備',
+    'nav-gaikan': '外観',
+    'nav-surrounding': '周辺',
+    'nav-access': 'アクセス',
+    'nav-contact': '予約・お問合せ',
+    'nav-reserve': 'ご予約・お問合せ',
+    'nav-tel': 'お電話でご予約',
+    'snav-rooms': 'お部屋',
+    'snav-shokudo': '食堂',
+    'snav-facilities': '設備',
+    'snav-gaikan': '外観',
+    'snav-surrounding': '周辺',
+    'snav-access': 'アクセス',
+    'snav-contact': '予約・お問合せ',
+    'snav-reserve': 'ご予約・お問合せ',
+    'sp-rooms': 'お部屋',
+    'sp-shokudo': '食堂',
+    'sp-facilities': '設備',
+    'sp-gaikan': '外観',
+    'sp-surrounding': '周辺写真',
+    'sp-access': 'アクセス',
+    'sp-contact': '予約・お問合せ',
+    'sp-reserve': 'ご予約・お問合せ',
+    'sp-tel': 'お電話でご予約',
+    'outline-1': '巡礼の道に静かに佇む遍路宿。',
+    'outline-2-pc': '二十番・鶴林寺と二十一番・太龍寺の懐で遍路の疲れを癒す、安らぎのひととき。',
+    'outline-2-sp': '二十番・鶴林寺と二十一番',
+    'outline-3-sp': '太龍寺の懐で遍路の疲れを癒す、安らぎのひととき。',
+    'outline-4': '亀と龍と鶴が護る、心やすらぐ宿。',
+    'sec-gaikan': '外観・施設',
+    'sec-rooms': 'お部屋',
+    'sec-shokudo': '食堂・ダイニング',
+    'sec-facilities': '設備',
+    'sec-surrounding': '周辺写真',
+    'btn-access': 'アクセスを見る',
+    'btn-reserve': 'ご予約はこちら',
+    'room-kame': '亀の間',
+    'room-ryu': '龍の間',
+    'room-ryu-note': '机を設置しました。',
+    'room-tsuru': '鶴の間',
+    'room-tsuru-note': 'フローリングにリニューアルしました。',
+    'ryuboku-title': '龍木',
+    'ryuboku-desc': '宿の庭に佇む龍木。力強くうねる幹が龍を思わせる、この地のシンボルです。',
+    'facility-toilet': 'トイレ',
+    'facility-toilet-note': 'ウォッシュレット対応',
+    'facility-bath': '風呂',
+    'facility-bath-note': '温度自動調整機能付き',
+    'facility-wash': '洗面台',
+    'facility-wash-note': '女性に優しい女性専用化粧水、クレンジング洗顔フォーム設置',
+    'news-1-date': '2026.04.01',
+    'news-1-text': '御宿・亀龍の公式サイトをオープンしました。',
+    'news-2-date': '2026.03.15',
+    'news-2-text': '春のお遍路シーズンに向けて宿をリニューアルしました。',
+    'news-3-date': '2026.01.10',
+    'news-3-text': '年末年始の営業についてのご案内。',
+    'btn-map': 'マップアプリで見る',
+    'access-note-title': '〔宿の場所について〕',
+    'access-note-body': '「亀龍」は、20番・鶴林寺を下りきった場所、水井橋を渡る手前、旧大井小学校の真下、大井休憩所の斜め前にあります。<br><br>〒771-5177 徳島県阿南市大井町中筋18-2',
+    'plan-title': '宿泊プラン',
+    'plan-body': '１泊２食付　（夕食、朝食）　…　８，８００円（税込）<br>素泊まり　…　６，６００円（税込）',
+    'contact-tel-label': 'お電話でのご予約',
+    'contact-tel-hours': '',
+    'contact-mail-label': 'メールでのご予約',
+    'contact-mail-hours': '24時間受付<br>メールでの申し込みは、コンフォームの返信が届いたら予約完了です。',
+    'contact-addr-label': '住所',
+    'contact-addr-val': '〒771-5177<br>徳島県阿南市大井町<br>中筋18-2',
+    'footer-addr': '〒771-5177 徳島県阿南市大井町中筋18-2<br>tel: <a href="tel:09032048821">090-3204-8821</a><br>mail: <a href="mailto:onyado.kiryu@docomo.ne.jp">onyado.kiryu@docomo.ne.jp</a>',
+    'footer-copy': '&copy; 2025 御宿・亀龍, all rights reserved.',
+    'hnav-name': '御宿・亀龍'
+  },
+  en: {
+    'html-lang': 'en',
+    'page-title': 'Onyado Kiryu | Ohenro Guesthouse in Anan, Tokushima [Official]',
+    'meta-desc': 'Official website of Onyado Kiryu, a pilgrim\'s inn in Oicho, Anan City, Tokushima. Located at the foot of Temple 20 Kakurinji, just before the Suii Bridge. Warm hospitality for Ohenro pilgrims.',
+    'h1-en': 'Onyado Kiryu',
+    'nav-rooms': 'Rooms',
+    'nav-shokudo': 'Dining',
+    'nav-facilities': 'Facilities',
+    'nav-gaikan': 'Exterior',
+    'nav-surrounding': 'Surroundings',
+    'nav-access': 'Access',
+    'nav-contact': 'Reservations',
+    'nav-reserve': 'Book / Inquire',
+    'nav-tel': 'Call to Reserve',
+    'snav-rooms': 'Rooms',
+    'snav-shokudo': 'Dining',
+    'snav-facilities': 'Facilities',
+    'snav-gaikan': 'Exterior',
+    'snav-surrounding': 'Surroundings',
+    'snav-access': 'Access',
+    'snav-contact': 'Reservations',
+    'snav-reserve': 'Book / Inquire',
+    'sp-rooms': 'Rooms',
+    'sp-shokudo': 'Dining',
+    'sp-facilities': 'Facilities',
+    'sp-gaikan': 'Exterior',
+    'sp-surrounding': 'Surroundings',
+    'sp-access': 'Access',
+    'sp-contact': 'Reservations',
+    'sp-reserve': 'Book / Inquire',
+    'sp-tel': 'Call to Reserve',
+    'outline-1': 'A quiet pilgrim\'s inn along the ancient pilgrimage trail.',
+    'outline-2-pc': 'Between Temple 20 Kakurinji and Temple 21 Tairyuji,',
+    'outline-2-sp': 'Between Temple 20 Kakurinji and Temple 21 Tairyuji,',
+    'outline-3-sp': 'a place to rest and restore your weary pilgrim\'s soul.',
+    'outline-4': 'Guarded by the tortoise, the dragon, and the crane.',
+    'sec-gaikan': 'Exterior & Facilities',
+    'sec-rooms': 'Rooms',
+    'sec-shokudo': 'Dining',
+    'sec-facilities': 'Facilities',
+    'sec-surrounding': 'Surroundings',
+    'btn-access': 'View Access',
+    'btn-reserve': 'Make a Reservation',
+    'room-kame': 'Kame no Ma (Tortoise Room)',
+    'room-ryu': 'Ryu no Ma (Dragon Room)',
+    'room-ryu-note': 'A desk has been added.',
+    'room-tsuru': 'Tsuru no Ma (Crane Room)',
+    'room-tsuru-note': 'Newly renovated with hardwood flooring.',
+    'ryuboku-title': 'Dragon Tree',
+    'ryuboku-desc': 'The Dragon Tree stands quietly in the inn\'s garden. Its powerfully twisting trunk evokes a dragon — a symbol of this sacred land.',
+    'facility-toilet': 'Restroom',
+    'facility-toilet-note': 'Washlet equipped',
+    'facility-bath': 'Bath',
+    'facility-bath-note': 'Auto temperature control',
+    'facility-wash': 'Washroom',
+    'facility-wash-note': 'Ladies\' skincare essentials provided (toner, cleansing foam)',
+    'news-1-date': 'Apr. 1, 2026',
+    'news-1-text': 'Official website of Onyado Kiryu has launched.',
+    'news-2-date': 'Mar. 15, 2026',
+    'news-2-text': 'The inn has been renovated for the spring Ohenro season.',
+    'news-3-date': 'Jan. 10, 2026',
+    'news-3-text': 'Notice regarding year-end and New Year\'s operating hours.',
+    'btn-map': 'Open in Maps',
+    'access-note-title': '[Location]',
+    'access-note-body': 'Kiryu is located at the bottom of Temple 20 Kakurinji, just before the Suii Bridge — directly below the former Oi Elementary School, diagonally across from the Oi Rest Area.<br><br>18-2 Nakasuji, Oicho, Anan City, Tokushima 771-5177',
+    'plan-title': 'Room Plans',
+    'plan-body': 'Dinner & Breakfast included &nbsp;…&nbsp; ¥8,800 (tax incl.)<br>Room only (Without meals) &nbsp;…&nbsp; ¥6,600 (tax incl.)',
+    'contact-tel-label': 'Phone Reservation',
+    'contact-tel-hours': '',
+    'contact-mail-label': 'Email Reservation',
+    'contact-mail-hours': '24 hours<br>Your reservation is confirmed once you receive our reply email.',
+    'contact-addr-label': 'Address',
+    'contact-addr-val': '18-2 Nakasuji, Oicho<br>Anan City, Tokushima<br>〒771-5177',
+    'footer-addr': '18-2 Nakasuji, Oicho, Anan City, Tokushima 771-5177<br>tel: <a href="tel:09032048821">090-3204-8821</a><br>mail: <a href="mailto:onyado.kiryu@docomo.ne.jp">onyado.kiryu@docomo.ne.jp</a>',
+    'footer-copy': '&copy; 2025 Onyado Kiryu, all rights reserved.',
+    'hnav-name': 'Onyado Kiryu'
+  }
+};
+
+/* =============================================
+   APPLY TRANSLATION
+   ============================================= */
+function applyLang(lang) {
+  var t = i18n[lang];
+  if (!t) return;
+
+  // html lang attr & title & meta
+  document.documentElement.lang = t['html-lang'];
+  document.title = t['page-title'];
+  var metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', t['meta-desc']);
+
+  // helper
+  function setText(sel, key) {
+    var el = document.querySelector(sel);
+    if (el) el.textContent = t[key] || '';
+  }
+  function setHtml(sel, key) {
+    var el = document.querySelector(sel);
+    if (el) el.innerHTML = t[key] || '';
+  }
+  function setAll(sel, key) {
+    document.querySelectorAll(sel).forEach(function(el){ el.textContent = t[key] || ''; });
+  }
+  function setAllHtml(sel, key) {
+    document.querySelectorAll(sel).forEach(function(el){ el.innerHTML = t[key] || ''; });
+  }
+
+  // header h1
+  var h1en = document.querySelector('header h1 .en');
+  if (h1en) h1en.textContent = t['h1-en'];
+
+  // gnav
+  var gnavLinks = document.querySelectorAll('#gnav ul li a span');
+  var gnavKeys = ['nav-rooms','nav-shokudo','nav-facilities','nav-gaikan','nav-surrounding','nav-access','nav-contact'];
+  gnavLinks.forEach(function(el, i){ if (gnavKeys[i]) el.textContent = t[gnavKeys[i]]; });
+
+  // gnav reserve
+  var gnavReserve = document.querySelector('header .reserve_gnav a span');
+  if (gnavReserve) gnavReserve.textContent = t['nav-reserve'];
+
+  // gnav tel
+  var gnavTel = document.querySelector('header .info li:first-child');
+  if (gnavTel) {
+    var telA = gnavTel.querySelector('a');
+    var telHref = telA ? telA.outerHTML : '';
+    gnavTel.innerHTML = t['nav-tel'] + telHref;
+  }
+
+  // snav
+  var snavLinks = document.querySelectorAll('#snav ul li a span');
+  var snavKeys = ['snav-rooms','snav-shokudo','snav-facilities','snav-gaikan','snav-surrounding','snav-access','snav-contact'];
+  snavLinks.forEach(function(el, i){ if (snavKeys[i]) el.textContent = t[snavKeys[i]]; });
+
+  var snavReserve = document.querySelector('.reserve_snav a span');
+  if (snavReserve) snavReserve.textContent = t['snav-reserve'];
+
+  // hnav (SP)
+  var spLinks = document.querySelectorAll('#hnav_content ul.nav_sp li a span');
+  var spKeys = ['sp-rooms','sp-shokudo','sp-facilities','sp-gaikan','sp-surrounding','sp-access','sp-contact'];
+  spLinks.forEach(function(el, i){ if (spKeys[i]) el.textContent = t[spKeys[i]]; });
+
+  var hnavReserve = document.querySelector('#hnav_content .reserve_hnav a span');
+  if (hnavReserve) hnavReserve.textContent = t['sp-reserve'];
+
+  var hnavName = document.querySelector('#hnav .hnav_name');
+  if (hnavName) hnavName.textContent = t['hnav-name'];
+
+  var spTel = document.querySelector('#hnav_content .info_sp li:first-child');
+  if (spTel) {
+    var spA = spTel.querySelector('a');
+    var spHref = spA ? spA.outerHTML : '';
+    spTel.innerHTML = t['sp-tel'] + '<br>' + spHref;
+  }
+
+  // home outline
+  var outlines = document.querySelectorAll('.home_outline ul.inview-up li');
+  if (outlines.length >= 4) {
+    if (lang === 'en') {
+      // 英語：4行すべて横書きで表示、sp-only li も表示に戻す
+      outlines[0].textContent = t['outline-1'];
+      // 2行目 li は spans をそのまま使わず直接テキストに置換
+      outlines[1].textContent = t['outline-2-pc'];
+      // 3行目（日本語SP用折り返し li）→ 英語3行目として使用
+      outlines[2].classList.remove('sp-only');
+      outlines[2].style.display = '';
+      outlines[2].textContent = t['outline-3-sp'];
+      outlines[3].textContent = t['outline-4'];
+    } else {
+      // 日本語：元の構造に戻す
+      outlines[0].textContent = t['outline-1'];
+      // 2行目 li を spans構造に戻す
+      outlines[1].innerHTML = '<span class="pc-only">' + t['outline-2-pc'] + '</span><span class="sp-only">' + t['outline-2-sp'] + '</span>';
+      // 3行目を sp-only に戻す
+      outlines[2].classList.add('sp-only');
+      outlines[2].style.display = '';
+      outlines[2].textContent = t['outline-3-sp'];
+      outlines[3].textContent = t['outline-4'];
+    }
+  }
+
+  // section headings
+  var secGaikan = document.querySelector('#gaikan h2.inview-up');
+  if (secGaikan) secGaikan.textContent = t['sec-gaikan'];
+  var secRooms = document.querySelector('#rooms h2.inview-up');
+  if (secRooms) secRooms.textContent = t['sec-rooms'];
+  var secShokudo = document.querySelector('#shokudo h2.inview-up');
+  if (secShokudo) secShokudo.textContent = t['sec-shokudo'];
+  var secFacilities = document.querySelector('#facilities h2.inview-up');
+  if (secFacilities) secFacilities.textContent = t['sec-facilities'];
+  var secSurrounding = document.querySelector('#surrounding h2.inview-up');
+  if (secSurrounding) secSurrounding.textContent = t['sec-surrounding'];
+
+  // buttons
+  document.querySelectorAll('.btnwrap').forEach(function(wrap){
+    var btn = wrap.querySelector('.btn span, .btn a span, a.btn span');
+    if (!btn) return;
+    var href = wrap.querySelector('a') ? wrap.querySelector('a').getAttribute('href') : '';
+    if (href === '#access') btn.textContent = t['btn-access'];
+    if (href === '#contact') btn.textContent = t['btn-reserve'];
+  });
+
+  // rooms
+  var roomCards = document.querySelectorAll('.room_card');
+  var roomData = [
+    {name:'room-kame', note:null},
+    {name:'room-ryu', note:'room-ryu-note'},
+    {name:'room-tsuru', note:'room-tsuru-note'}
+  ];
+  roomCards.forEach(function(card, i) {
+    if (!roomData[i]) return;
+    var nameEl = card.querySelector('.room_name');
+    if (nameEl) nameEl.textContent = t[roomData[i].name];
+    if (roomData[i].note) {
+      var noteEl = card.querySelector('.room_note');
+      if (noteEl) noteEl.textContent = t[roomData[i].note];
+    }
+  });
+
+  // dragon tree
+  var ryubokuTitle = document.querySelector('.ryuboku_title');
+  if (ryubokuTitle) ryubokuTitle.textContent = t['ryuboku-title'];
+  var ryubokuDesc = document.querySelector('.ryuboku_desc');
+  if (ryubokuDesc) ryubokuDesc.textContent = t['ryuboku-desc'];
+
+  // facilities
+  var facilityItems = document.querySelectorAll('.facility_item');
+  var facilityData = [
+    {title:'facility-toilet', note:'facility-toilet-note'},
+    {title:'facility-bath',   note:'facility-bath-note'},
+    {title:'facility-wash',   note:'facility-wash-note'}
+  ];
+  facilityItems.forEach(function(item, i) {
+    if (!facilityData[i]) return;
+    var h4 = item.querySelector('h4');
+    var p  = item.querySelector('p');
+    if (h4) h4.textContent = t[facilityData[i].title];
+    if (p)  p.textContent  = t[facilityData[i].note];
+  });
+
+  // news
+  var newsDts = document.querySelectorAll('.home_news dl dt');
+  var newsDds = document.querySelectorAll('.home_news dl dd');
+  var newsData = [
+    {date:'news-1-date', text:'news-1-text'},
+    {date:'news-2-date', text:'news-2-text'},
+    {date:'news-3-date', text:'news-3-text'}
+  ];
+  newsData.forEach(function(d, i) {
+    if (newsDts[i]) newsDts[i].textContent = t[d.date];
+    if (newsDds[i]) {
+      var a = newsDds[i].querySelector('a');
+      if (a) a.textContent = t[d.text];
+    }
+  });
+
+  // access
+  var btnMap = document.querySelector('.btnwrap a[href*="google.com/maps"]');
+  if (btnMap) { var s = btnMap.querySelector('span'); if(s) s.textContent = t['btn-map']; }
+
+  var accessNoteH4 = document.querySelector('.access_note h4');
+  if (accessNoteH4) accessNoteH4.textContent = t['access-note-title'];
+  var accessNoteP = document.querySelector('.access_note > p:first-of-type');
+  if (accessNoteP) accessNoteP.innerHTML = t['access-note-body'];
+
+  // plan
+  var planHr = document.querySelector('.access_note hr');
+  if (planHr) {
+    var planH4 = planHr.nextElementSibling;
+    if (planH4 && planH4.tagName === 'H4') planH4.textContent = t['plan-title'];
+    var planP = planH4 ? planH4.nextElementSibling : null;
+    if (planP) planP.innerHTML = t['plan-body'];
+  }
+
+  // contact
+  var cItems = document.querySelectorAll('.contact_item');
+  if (cItems[0]) {
+    var lbl = cItems[0].querySelector('.label');
+    var hrs = cItems[0].querySelector('p');
+    if (lbl) lbl.textContent = t['contact-tel-label'];
+    if (hrs) hrs.textContent = t['contact-tel-hours'];
+  }
+  if (cItems[1]) {
+    var lbl2 = cItems[1].querySelector('.label');
+    var hrs2 = cItems[1].querySelector('p');
+    if (lbl2) lbl2.textContent = t['contact-mail-label'];
+    if (hrs2) hrs2.innerHTML = t['contact-mail-hours'];
+  }
+  if (cItems[2]) {
+    var lbl3 = cItems[2].querySelector('.label');
+    var val3 = cItems[2].querySelector('.value');
+    if (lbl3) lbl3.textContent = t['contact-addr-label'];
+    if (val3) val3.innerHTML = t['contact-addr-val'];
+  }
+
+  // footer
+  var footerAddr = document.querySelector('footer address');
+  if (footerAddr) {
+    var logoImg = footerAddr.querySelector('img');
+    var logoHtml = logoImg ? logoImg.outerHTML : '';
+    footerAddr.innerHTML = logoHtml + t['footer-addr'];
+  }
+  var footerSmall = document.querySelector('footer small');
+  if (footerSmall) footerSmall.innerHTML = t['footer-copy'];
+
+  // toggle button active state
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+  // save
+  try { localStorage.setItem('kiryu_lang', lang); } catch(e) {}
+}
+
+/* =============================================
+   SET LANG (from toggle)
+   ============================================= */
+function setLang(lang) {
+  applyLang(lang);
+}
+
+/* =============================================
+   POPUP
+   ============================================= */
+function choosePopupLang(lang) {
+  document.getElementById('lang-popup-overlay').classList.remove('show');
+  try { localStorage.setItem('kiryu_lang_chosen', '1'); } catch(e) {}
+  applyLang(lang);
+}
+
+/* =============================================
+   IP DETECTION & INIT
+   ============================================= */
+(function(){
+  var savedLang = null;
+  var alreadyChosen = false;
+  try {
+    savedLang     = localStorage.getItem('kiryu_lang');
+    alreadyChosen = localStorage.getItem('kiryu_lang_chosen') === '1';
+  } catch(e) {}
+
+  // 保存済みの選択があればポップアップなしで即適用
+  if (savedLang && alreadyChosen) {
+    applyLang(savedLang);
+    return;
+  }
+
+  // IP判定 → 海外IPなら英語で初期表示しつつポップアップ
+  // ipapi.co は無料・CORS対応
+  function showPopup(defaultLang) {
+    applyLang(defaultLang);
+    // ローダー非表示後に表示（ちらつき防止）
+    setTimeout(function(){
+      document.getElementById('lang-popup-overlay').classList.add('show');
+    }, 700);
+  }
+
+  fetch('https://ipapi.co/json/')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var country = (data && data.country_code) ? data.country_code : 'JP';
+      var defaultLang = (country === 'JP') ? 'ja' : 'en';
+      showPopup(defaultLang);
+    })
+    .catch(function(){
+      // API失敗時：ブラウザ言語で判定
+      var bl = (navigator.language || navigator.userLanguage || 'ja').toLowerCase();
+      var defaultLang = bl.startsWith('ja') ? 'ja' : 'en';
+      showPopup(defaultLang);
+    });
+})();
 </script>
 
 </body>
